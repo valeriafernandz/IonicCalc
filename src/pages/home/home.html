@@ -1,0 +1,48 @@
+
+<ion-content>
+ 
+  <ion-content>
+    <ion-grid (swipe)="onSwipe()">
+      <ion-row >
+          <h1> {{op}}</h1>
+      </ion-row>
+      <ion-row>
+          <ion-col col-9>
+                <ion-row >
+                    <ion-col col-4><button (click)="erase()" ion-button class="btn special">CE</button></ion-col>
+                    <ion-col col-4><button (click)="delete()" ion-button class="btn special">C</button></ion-col>
+                    <ion-col col-4><button (click)="delete()" ion-button class="btn special">DEL</button></ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-4 ><button (click)="print($event.target.innerText)" ion-button class="btn">7</button></ion-col>
+                    <ion-col col-4 ><button (click)="print($event.target.innerText)" ion-button class="btn">8</button></ion-col>
+                    <ion-col col-4 ><button (click)="print($event.target.innerText)" ion-button class="btn">9</button></ion-col>
+                </ion-row>
+                <ion-row >
+                    <ion-col col-4 ><button (click)="print($event.target.innerText)" ion-button class="btn">4</button></ion-col>
+                    <ion-col col-4 ><button (click)="print($event.target.innerText)" ion-button class="btn">5</button></ion-col>
+                    <ion-col col-4 ><button (click)="print($event.target.innerText)" ion-button class="btn">6</button></ion-col>
+                </ion-row>
+                <ion-row >
+                    <ion-col col-4 ><button (click)="print($event.target.innerText)" ion-button class="btn">1</button></ion-col>
+                    <ion-col col-4 ><button (click)="print($event.target.innerText)" ion-button class="btn">2</button></ion-col>
+                    <ion-col col-4 ><button (click)="print($event.target.innerText)" ion-button class="btn">3</button></ion-col>
+                </ion-row>
+                <ion-row >
+                    <ion-col col-4 ><button (click)="print($event.target.innerText)" ion-button class="btn" id="cero">0</button></ion-col>
+                    <ion-col col-4 ><button (click)="print($event.target.innerText)" ion-button class="btn special">.</button></ion-col>
+                    <ion-col col-4 ><button (click)="operate(hidden)" ion-button class="btn special">=</button></ion-col>
+                </ion-row>
+            </ion-col>
+            <ion-col col-3  *ngIf="!swiped">
+              <ion-row *ngFor="let button of opArray1" id="swiped"><button (click)="print($event.target.innerText)" ion-button class="btn special">{{button}}</button></ion-row>
+            </ion-col>
+            <ion-col col-3  *ngIf="swiped" >
+                <ion-row *ngFor="let button of opArray2" id="swiped"><button style="text-transform:lowercase;"(click)="print($event.target.innerText)" ion-button class="btn special">{{button}}</button></ion-row>
+              </ion-col>
+      </ion-row>
+     
+    </ion-grid>
+  </ion-content>
+  
+</ion-content>

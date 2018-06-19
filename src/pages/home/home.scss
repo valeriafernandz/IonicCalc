@@ -1,0 +1,51 @@
+// page-home {
+    
+//     .btn{
+//         padding: 20px;
+//         border-radius: 50px;
+//         border: #222 solid;
+//         font-size: 20px;
+//         background-color: #f4f4f4;
+//         color:black;
+//         width:25%;
+//     }
+    
+//     .btn.special{
+//         color:black;
+//         background-color: #1de9b6;
+//     }
+// }
+
+page-home {
+    
+    h1{
+        border:#222 solid;
+        background: color #f4f4f4;
+        height: 100px;
+        width: 100%;
+        overflow: hidden;
+    }
+    #swiped{
+        margin-top:5px;
+        margin-bottom: 10px;
+    }
+    .btn{
+        padding: 20px;
+        border-radius: 15px;
+        border: #222 solid;
+        font-size: 20px;
+        background-color: #f4f4f4;
+        color:black;
+        width: 100%;
+    }
+    
+    .btn.special{
+        background-color: #1de9b6;
+        color: black;
+    }
+    ion-content{
+        width: 100%;
+    }
+    
+}
+
